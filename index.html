@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variedades Yesica ✨</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header class="encabezado">
+    <a href="#inicio" class="logo">Variedades Yesica ✨</a>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <button class="boton-carrito" onclick="mostrarCarrito()">
+        🛒 Mi pedido (<span id="contador">0</span>)
+    </button>
+</header>
+
+<section class="catalogo" id="inicio">
+
+    <div class="titulo-principal" id="catalogo">
+        <h1>Nuestro catálogo</h1>
+        <p>Precios en pesos colombianos (COP).</p>
+    </div>
+
+    <!-- BLUSAS -->
+    <section class="categoria">
+        <h2>01. Blusas 💕</h2>
+        <p class="descripcion">Diseños modernos y cómodos.</p>
+
+        <div class="productos">
+
+            <article class="producto">
+                <img src="imagenes/blusas-estampadas.jpg"
+                     alt="Blusas estampadas">
+                <div class="info">
+                    <h3>Blusas estampadas</h3>
+                    <p>Diseños modernos y variados.</p>
+                    <strong>$80.000</strong>
+                    <button onclick="agregarProducto('Blusas estampadas')">
+                        Agregar +
+                    </button>
+                </div>
+            </article>
+
+            <article class="producto">
+                <img src="imagenes/blusas-sencillas.jpg"
+                     alt="Blusas sencillas">
+                <div class="info">
+                    <h3>Blusas sencillas</h3>
+                    <p>Prendas cómodas para combinar.</p>
+                    <strong>$40.000</strong>
+                    <button onclick="agregarProducto('Blusas sencillas')">
+                        Agregar +
+                    </button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- BERMUDAS -->
+    <section class="categoria">
+        <h2>02. Bermudas 👖</h2>
+        <p class="descripcion">Frescura y comodidad para tu estilo.</p>
+
+        <div class="productos">
+
+            <article class="producto">
+                <img src="imagenes/bermuda-rigida.jpg"
+                     alt="Bermuda rígida">
+                <div class="info">
+                    <h3>Bermuda de jean rígida</h3>
+                    <p>Jean resistente y moderno.</p>
+                    <strong>$70.000</strong>
+                    <button onclick="agregarProducto('Bermuda de jean rígida')">
+                        Agregar +
+                    </button>
+                </div>
+            </article>
+
+            <article class="producto">
+                <img src="imagenes/bermuda-licrada.jpg"
+                     alt="Bermuda licrada">
+                <div class="info">
+                    <h3>Bermuda licrada</h3>
+                    <p>Mayor comodidad y ajuste.</p>
+                    <strong>Consultar precio</strong>
+                    <button onclick="agregarProducto('Bermuda licrada')">
+                        Agregar +
+                    </button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- PANTALONES -->
+    <section class="categoria">
+        <h2>03. Pantalones 👖</h2>
+        <p class="descripcion">Estilo y calidad para todos los días.</p>
+
+        <div class="productos">
+
+            <article class="producto">
+                <img src="imagenes/pantalon-azul-oscuro.jpg"
+                     alt="Pantalón azul oscuro">
+                <div class="info">
+                    <h3>Pantalón azul oscuro</h3>
+                    <p>Diseño moderno y cómodo.</p>
+                    <strong>$85.000</strong>
+                    <button onclick="agregarProducto('Pantalón azul oscuro')">
+                        Agregar +
+                    </button>
+                </div>
+            </article>
+
+            <article class="producto">
+                <img src="imagenes/pantalon-negro.jpg"
+                     alt="Pantalón negro">
+                <div class="info">
+                    <h3>Pantalón negro</h3>
+                    <p>Un básico para combinar.</p>
+                    <strong>$85.000</strong>
+                    <button onclick="agregarProducto('Pantalón negro')">
+                        Agregar +
+                    </button>
+                </div>
+            </article>
+
+            <article class="producto">
+                <img src="imagenes/pantalon-azul-claro.jpg"
+                     alt="Pantalón azul claro">
+                <div class="info">
+                    <h3>Pantalón azul claro</h3>
+                    <p>Estilo juvenil y moderno.</p>
+                    <strong>$85.000</strong>
+                    <button onclick="agregarProducto('Pantalón azul claro')">
+                        Agregar +
+                    </button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+</section>
+
+<!-- NOSOTROS -->
+<section class="nosotros" id="nosotros">
+    <h2>Sobre nosotros 💗</h2>
+    <p>
+        Bienvenidos a Variedades Yesica. Encuentra prendas bonitas,
+        modernas y a excelentes precios. ¡Gracias por apoyar
+        nuestro emprendimiento!
+    </p>
+</section>
+
+<!-- CONTACTO -->
+<section class="contacto" id="contacto">
+    <h2>Contáctanos</h2>
+    <p>Haz tu pedido directamente por WhatsApp.</p>
+    <a href="https://wa.me/573113308802" target="_blank">
+        Escribir por WhatsApp
+    </a>
+</section>
+
+<!-- CARRITO -->
+<div class="fondo-carrito" id="fondoCarrito">
+    <div class="ventana-carrito">
+        <button class="cerrar" onclick="cerrarCarrito()">✕</button>
+        <h2>Mi pedido 🛒</h2>
+
+        <div id="listaCarrito"></div>
+
+        <h3 id="total">Total: $0</h3>
+
+        <button class="enviar" onclick="enviarWhatsApp()">
+            Enviar pedido por WhatsApp
+        </button>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Variedades Yesica ✨ | Todos los derechos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
